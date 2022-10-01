@@ -1,1 +1,76 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --color1: #1F187A;
+    --color2: #0049A7;
+    --color3: #0071C1;
+    --color4: #0097CA;
+    --color5: #00BCC6;
+    --color6: #2DDEBF;
+
+    --second1: #5E5080;
+    --secont2: #AFA8BA;
+    --second3: #7A7485;
+    --second4: #6E0000;
+    --second5: #AA2120;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2 {
+    color: #444;
+}
+
+
+/* resets*/
+
+dl,
+ol,
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.element-top {
+    margin-top: 20%;
+}
+
+.title {
+    font-size: 30px;
+    color: #D94B54;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.title-card {
+    font-size: 16px;
+    font-weight: 700;
+    color: #D94B54;
+}
+
+.box {
+    background-color: #FFF;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.bg-primary-gradient {
+    background-image: linear-gradient(to right top, #1f187a, #34267c, #44347d, #52427f, #5e5080);
+}
