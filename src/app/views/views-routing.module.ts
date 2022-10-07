@@ -1,13 +1,13 @@
-import { LeagueHeadComponent } from './componentes/league-head/league-head.component';
+import { AllComponent } from './components/all/all.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', component: LeagueHeadComponent }
+  { path: '', component: AllComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class LeagueRoutingModule { }
+export class ViewsRoutingModule { }

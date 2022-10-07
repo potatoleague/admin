@@ -7,6 +7,14 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
   },
+  {
+    path: 'home',
+    loadChildren: () => import('./views/views.module').then(m => m.ViewsModule)
+  },
+  {
+    path: 'control',
+    loadChildren: () => import('./league/league.module').then(m => m.LeagueModule)
+  }
 ];
 
 @NgModule({
