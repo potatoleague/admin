@@ -1,4 +1,6 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-league-create',
@@ -7,9 +9,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeagueCreateComponent implements OnInit {
 
-  constructor() { }
+  ligaForm!: FormGroup;
+
+  disputa: any[] = [
+    { id: 1, name: 'Mata-mata' },
+    { id: 2, name: 'Pontos Corridos' },
+    { id: 3, name: 'Misto' },
+  ];
+  tipo = ['Canindé', 'Futsal', 'Futebol de Areia'];
+
+  constructor(
+    private router: Router,
+    private fb: FormBuilder
+  ) { }
 
   ngOnInit(): void {
+    this.ligaForm = this.fb.group({
+      name: [''],
+      dt_ini: [''],
+      dt_fim: [''],
+      t_disputa: [''],
+      t_campo: ['']
+    });
+  }
+
+  createLeague(form: any) {
+    console.log('nova-liga', form);
+    this.router.navigate(['/painel-controle']);
   }
 
 }

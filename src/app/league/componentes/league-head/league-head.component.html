@@ -11,12 +11,11 @@
         />
       </form>
       <div class="col-lg-2">
-        <button class="btn btn-outline-success" (click)="create()">Nova liga</button>
+        <button class="btn btn-outline-success" routerLink="nova-liga">Nova liga</button>
       </div>
     </div>
 
     <table>
-    <caption>Statement Summary</caption>
     <thead>
       <tr>
         <th *ngFor="let col of displayedColumns" scope="col">{{ col }}</th>
@@ -30,8 +29,7 @@
         <td data-label="Fim"> {{ league.date_fim }} </td>
         <td data-label="Ações" class="align-middle">
           <div class="d-flex justify-content-end align-items-end flex-column">
-          <button type="button" class="btn btn-outline-primary btn-sm w-50" routerLink="/nova-liga">Criar</button>
-          <button type="button" class="btn btn-outline-danger btn-sm w-50 my-1">Editar</button>
+          <button type="button" routerLink="atualizar-liga" class="btn btn-outline-danger btn-sm w-50 my-1">Editar</button>
           <button type="button" class="btn btn-outline-info btn-sm w-50">Configurar</button>
           </div>
         </td>

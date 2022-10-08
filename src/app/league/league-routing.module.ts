@@ -1,3 +1,4 @@
+import { LeagueUpdateComponent } from './componentes/league-update/league-update.component';
 import { LeagueCreateComponent } from './componentes/league-create/league-create.component';
 import { LeagueHeadComponent } from './componentes/league-head/league-head.component';
 import { NgModule } from '@angular/core';
@@ -8,7 +9,8 @@ const routes: Routes = [
   { path: '', component: InitComponent,
     children: [
       { path: '', component: LeagueHeadComponent },
-      { path: 'nova-liga', component: LeagueCreateComponent }
+      { path: 'nova-liga', component: LeagueCreateComponent },
+      { path: 'atualizar-liga', component: LeagueUpdateComponent }
     ]
   }
 ];

@@ -1,6 +1,6 @@
 export const menuData = [
   {
-    routerLink: 'home',
+    routerLink: 'painel-controle',
     icon: 'home',
     label: 'Home'
   },
@@ -10,12 +10,12 @@ export const menuData = [
     label: 'Equipes'
   },
   {
-    routerLink: 'jogadores',
+    routerLink: 'atletas',
     icon: 'workspace_premium',
     label: 'Jogadores'
   },
   {
-    routerLink: 'arbitragem',
+    routerLink: 'arbitros',
     icon: 'sports',
     label: 'Arbitragem'
   },
