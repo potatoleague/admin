@@ -1,1 +1,40 @@
-<p>league-head works!</p>
+<div class="container-fluid">
+  <div class="mt-3 p-2">
+    <h1>Painel de controle</h1>
+    <div class="row justify-content-between my-3">
+      <form class="d-flex col-lg-6" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+      </form>
+      <div class="col-lg-2">
+        <button class="btn btn-outline-success" (click)="create()">Nova liga</button>
+      </div>
+    </div>
+
+    <table>
+    <caption>Statement Summary</caption>
+    <thead>
+      <tr>
+        <th *ngFor="let col of displayedColumns" scope="col">{{ col }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let league of leagues">
+        <td data-label="ID"> {{ league.id }} </td>
+        <td data-label="Início"> {{ league.name }} </td>
+        <td data-label="Name"> {{ league.date_ini }} </td>
+        <td data-label="Fim"> {{ league.date_fim }} </td>
+        <td data-label="Ações" class="align-middle">
+          <div class="d-flex justify-content-end align-items-end flex-column">
+          <button type="button" class="btn btn-outline-primary btn-sm w-50" routerLink="/nova-liga">Criar</button>
+          <button type="button" class="btn btn-outline-danger btn-sm w-50 my-1">Editar</button>
+          <button type="button" class="btn btn-outline-info btn-sm w-50">Configurar</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>

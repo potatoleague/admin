@@ -8,11 +8,7 @@ const routes: Routes = [
     loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
   },
   {
-    path: 'home',
-    loadChildren: () => import('./views/views.module').then(m => m.ViewsModule)
-  },
-  {
-    path: 'control',
+    path: 'painel-controle',
     loadChildren: () => import('./league/league.module').then(m => m.LeagueModule)
   }
 ];

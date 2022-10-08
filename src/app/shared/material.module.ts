@@ -45,6 +45,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { HeaderComponent } from './header/header.component';
 
 const modules = [
   A11yModule,
@@ -95,13 +96,16 @@ const modules = [
 ]
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    HeaderComponent
+  ],
   imports: [
     CommonModule,
   ],
   exports: [
     FormsModule,
     ReactiveFormsModule,
+    HeaderComponent,
     ...modules
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
