@@ -1,0 +1,23 @@
+h1 {
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 992px) {
+  .mat-card {
+    width: 800px !important;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 768px) {
+  .mat-card {
+    width: 700px !important;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .mat-card {
+    width: 90% !important;
+    margin: 0 auto;
+  }
+}
