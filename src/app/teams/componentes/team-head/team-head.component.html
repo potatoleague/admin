@@ -1,1 +1,12 @@
-<p>team-head works!</p>
+<div class="container">
+  <button mat-raised-button routerLink="novo-time" class="my-3" color="primary">Novo time</button>
+  <div class="row">
+    <div *ngFor="let t of times" class="box d-flex flex-column justify-content-center align-items-center">
+      <a class="text-center" routerLink="time/{{ t.id }}">
+        <img class="scudo" [src]="t.url" alt="" />
+        {{ t.name }} time/{{ t.id }}
+        <!-- https://www.freelogoservices.com/pt/step2 -->
+      </a>
+    </div>
+  </div>
+</div>

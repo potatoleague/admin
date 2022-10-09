@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { CommonModule } from '@angular/common';
@@ -45,6 +46,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { HeaderComponent } from './header/header.component';
 
 const modules = [
   A11yModule,
@@ -95,13 +97,17 @@ const modules = [
 ]
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    HeaderComponent
+  ],
   imports: [
     CommonModule,
+    RouterModule
   ],
   exports: [
     FormsModule,
     ReactiveFormsModule,
+    HeaderComponent,
     ...modules
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
