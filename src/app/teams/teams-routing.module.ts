@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: '', component: InitComponent,
     children: [
       { path: '', component: TeamHeadComponent },
-      { path: 'novo', component: TeamCreateComponent },
+      { path: 'novo-time', component: TeamCreateComponent },
       { path: 'time/:id', component: TeamUpdateComponent }
     ]
   }

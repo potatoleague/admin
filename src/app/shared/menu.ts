@@ -1,37 +1,42 @@
 export const menuData = [
   {
-    routerLink: 'painel-controle',
+    routerLink: '/painel-controle',
     icon: 'home',
     label: 'Home'
   },
   {
-    routerLink: 'equipes',
+    routerLink: '/times',
     icon: 'groups',
-    label: 'Equipes'
+    label: 'Times'
   },
   {
-    routerLink: 'atletas',
+    routerLink: '/atletas',
     icon: 'workspace_premium',
     label: 'Jogadores'
   },
   {
-    routerLink: 'arbitros',
+    routerLink: '/arbitros',
     icon: 'sports',
     label: 'Arbitragem'
   },
   {
-    routerLink: '/home/rodadas',
-    icon: 'sports_soccer',
-    label: 'Rodadas'
+    routerLink: '/login',
+    icon: 'sports',
+    label: 'SAIR'
   },
-  {
-    routerLink: '/home/lista',
-    icon: 'sports_soccer',
-    label: 'Lista'
-  },
-  {
-    routerLink: '/home/confrontos',
-    icon: 'sports_soccer',
-    label: 'Confrontos'
-  },
+  // {
+  //   routerLink: '/home/rodadas',
+  //   icon: 'sports_soccer',
+  //   label: 'Rodadas'
+  // },
+  // {
+  //   routerLink: '/home/lista',
+  //   icon: 'sports_soccer',
+  //   label: 'Lista'
+  // },
+  // {
+  //   routerLink: '/home/confrontos',
+  //   icon: 'sports_soccer',
+  //   label: 'Confrontos'
+  // },
 ]

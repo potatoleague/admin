@@ -1,52 +1,56 @@
 <div class="container-fluid mt-3">
   <mat-card>
   <h1 class="text-center">Cadastro times</h1>
-    <form class="row g-3">
-      <div class="col-lg-9 col-md-9 col-sm-6">
-        <mat-form-field class="example-full-width w-100" appearance="fill">
-          <mat-label>Nome</mat-label>
-          <input matInput placeholder="Ex. Step Sport clube " />
-        </mat-form-field>
-      </div>
-      <div class="col-lg-3 col-md-3 col-sm-6">
-        <mat-form-field class="example-full-width w-100" appearance="fill">
-          <mat-label>Apelido</mat-label>
-          <input matInput placeholder="Ex. Step" />
-        </mat-form-field>
+    <form [formGroup]="novoTime">
+      <div class="row g-3" formGroupName="infos">
+        <div class="col-lg-9 col-md-9 col-sm-6">
+          <mat-form-field class="example-full-width w-100" appearance="fill">
+            <mat-label>Nome</mat-label>
+            <input matInput placeholder="Ex. Step Sport clube " formControlName="name" />
+          </mat-form-field>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6">
+          <mat-form-field class="example-full-width w-100" appearance="fill">
+            <mat-label>Apelido</mat-label>
+            <input matInput placeholder="Ex. Step" formControlName="apelido" />
+          </mat-form-field>
+        </div>
       </div>
 
-      <div class="col-md-3 col-sm-3">
-        <mat-form-field class="example-full-width w-100" appearance="fill">
-          <mat-label>CEP</mat-label>
-          <input matInput placeholder="Ex. 14300-000" />
-        </mat-form-field>
+      <div class="row g-3" formGroupName="endereco">
+        <div class="col-md-3 col-sm-3">
+          <mat-form-field class="example-full-width w-100" appearance="fill">
+            <mat-label>CEP</mat-label>
+            <input matInput placeholder="Ex. 14300-000"formControlName="cep" (blur)="getAddress()" />
+          </mat-form-field>
+        </div>
+        <div class="col-md-6 col-sm-6">
+          <mat-form-field class="example-full-width w-100" appearance="fill">
+            <mat-label>Endereço</mat-label>
+            <input matInput placeholder="Ex. Rua Torta" formControlName="logradouro" />
+          </mat-form-field>
+        </div>
+        <div class="col-md-3 col-sm-3">
+          <mat-form-field class="example-full-width w-100" appearance="fill">
+            <mat-label>Número</mat-label>
+            <input matInput placeholder="Ex. 279" formControlName="numero" />
+          </mat-form-field>
+        </div>
+        <div class="col-md-6 col-sm-6">
+          <mat-form-field class="example-full-width w-100" appearance="fill">
+            <mat-label>Cidade</mat-label>
+             <input matInput placeholder="Ex. São Paulo" formControlName="localidade" />
+          </mat-form-field>
+        </div>
+        <div class="col-md-6 col-sm-6">
+          <mat-form-field class="example-full-width w-100" appearance="fill">
+            <mat-label>Estado</mat-label>
+            <input matInput placeholder="Ex. São Paulo" formControlName="uf" />
+          </mat-form-field>
+        </div>
       </div>
-      <div class="col-md-6 col-sm-6">
-        <mat-form-field class="example-full-width w-100" appearance="fill">
-          <mat-label>Endereço</mat-label>
-          <input matInput placeholder="Ex. Rua Torta" />
-        </mat-form-field>
-      </div>
-      <div class="col-md-3 col-sm-3">
-        <mat-form-field class="example-full-width w-100" appearance="fill">
-          <mat-label>Número</mat-label>
-          <input matInput placeholder="Ex. 279" />
-        </mat-form-field>
-      </div>
-      <div class="col-md-6 col-sm-6">
-        <mat-form-field class="example-full-width w-100" appearance="fill">
-          <mat-label>Cidade</mat-label>
-          <input matInput placeholder="Ex. São Paulo" />
-        </mat-form-field>
-      </div>
-      <div class="col-md-6 col-sm-6">
-        <mat-form-field class="example-full-width w-100" appearance="fill">
-          <mat-label>Estado</mat-label>
-          <input matInput placeholder="Ex. São Paulo" />
-        </mat-form-field>
-      </div>
-      <div class="col-12 d-flex justify-content-end">
-        <button mat-raised-button color="primary">Primary</button>
+      <div class="col-12 d-flex justify-content-end" (click)="save(novoTime.value)">
+        <button mat-raised-button color="primary">Salvar</button>
       </div>
     </form>
   </mat-card>
