@@ -12,12 +12,12 @@ export const menuData = [
   {
     routerLink: '/atletas',
     icon: 'workspace_premium',
-    label: 'Jogadores'
+    label: 'Atletas'
   },
   {
     routerLink: '/arbitros',
     icon: 'sports',
-    label: 'Arbitragem'
+    label: 'Árbitros'
   },
   {
     routerLink: '/login',
