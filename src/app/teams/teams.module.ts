@@ -7,6 +7,7 @@ import { TeamCreateComponent } from './componentes/team-create/team-create.compo
 import { TeamUpdateComponent } from './componentes/team-update/team-update.component';
 import { MaterialModule } from '../shared/material.module';
 import { InitComponent } from './componentes/init/init.component';
+import { TeamIdComponent } from './componentes/team-id/team-id.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { InitComponent } from './componentes/init/init.component';
     TeamHeadComponent,
     TeamCreateComponent,
     TeamUpdateComponent,
-    InitComponent
+    InitComponent,
+    TeamIdComponent
   ],
   imports: [
     CommonModule,
