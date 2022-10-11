@@ -9,8 +9,8 @@ const routes: Routes = [
   { path: '', component: InitComponent,
     children: [
       { path: '', component: LeagueHeadComponent },
-      { path: 'nova-liga', component: LeagueCreateComponent },
-      { path: 'atualizar-liga', component: LeagueUpdateComponent }
+      { path: 'new', component: LeagueCreateComponent },
+      { path: 'update', component: LeagueUpdateComponent }
     ]
   }
 ];

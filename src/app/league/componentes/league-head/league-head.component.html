@@ -11,7 +11,7 @@
         />
       </form>
       <div class="col-lg-2">
-        <button class="btn btn-outline-success" routerLink="nova-liga">Nova liga</button>
+        <button mat-stroked-button color="primary" routerLink="new">Nova liga</button>
       </div>
     </div>
 
@@ -29,8 +29,8 @@
         <td data-label="Fim"> {{ league.date_fim }} </td>
         <td data-label="Ações" class="align-middle">
           <div class="d-flex justify-content-end align-items-end flex-column">
-          <button type="button" routerLink="atualizar-liga" class="btn btn-outline-danger btn-sm w-50 my-1">Editar</button>
-          <button type="button" class="btn btn-outline-info btn-sm w-50">Configurar</button>
+          <button type="button" routerLink="update" mat-stroked-button color="primary" class="btn-sm w-50 my-1">Editar</button>
+          <button type="button" mat-stroked-button class="btn-sm w-50">Configurar</button>
           </div>
         </td>
       </tr>
