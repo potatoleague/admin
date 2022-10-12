@@ -1,0 +1,75 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.interno {
+  background-image: url('https://futebolpaulista.com.br/assets/img/banner-clube-claro.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 120px;
+  width: 100%;
+}
+
+.img-time {
+  position: relative;
+  width: 100px;
+}
+
+.inter {
+  position: absolute;
+  display: flex;
+  top: 120px;
+  padding: 0 3rem;
+  width: 100%;
+}
+
+.inter .title-time {
+  position: absolute;
+  padding-top: 30px;
+  margin-left: 110px;
+  color:#004993;
+}
+
+.title-time {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #004993;
+}
+
+@media screen and (max-width: 648px) {
+  .title-time {
+    font-size: 1.7rem;
+    color: #004993;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .title-time {
+    font-size: 1.3rem;
+    color: #004993;
+  }
+
+  .img-time {
+    position: relative;
+    width: 80px;
+  }
+
+  .inter {
+    top: 120px;
+    padding: 0 1.5rem;
+    width: 100%;
+  }
+
+  .inter .title-time {
+    position: absolute;
+    margin-left: 90px;
+  }
+}

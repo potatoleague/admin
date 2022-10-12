@@ -1,3 +1,4 @@
+import { TeamIdComponent } from './componentes/team-id/team-id.component';
 import { TeamUpdateComponent } from './componentes/team-update/team-update.component';
 import { TeamCreateComponent } from './componentes/team-create/team-create.component';
 import { TeamHeadComponent } from './componentes/team-head/team-head.component';
@@ -10,7 +11,8 @@ const routes: Routes = [
     children: [
       { path: '', component: TeamHeadComponent },
       { path: 'novo-time', component: TeamCreateComponent },
-      { path: 'time/:id', component: TeamUpdateComponent }
+      { path: 'update-time/:id', component: TeamUpdateComponent },
+      { path: 'time/:id', component: TeamIdComponent }
     ]
   }
 ];
