@@ -1,3 +1,4 @@
+import { LeagueConfigComponent } from './componentes/league-config/league-config.component';
 import { LeagueUpdateComponent } from './componentes/league-update/league-update.component';
 import { LeagueCreateComponent } from './componentes/league-create/league-create.component';
 import { LeagueHeadComponent } from './componentes/league-head/league-head.component';
@@ -10,7 +11,8 @@ const routes: Routes = [
     children: [
       { path: '', component: LeagueHeadComponent },
       { path: 'new', component: LeagueCreateComponent },
-      { path: 'update', component: LeagueUpdateComponent }
+      { path: 'update/:id', component: LeagueUpdateComponent },
+      { path: ':id/config', component: LeagueConfigComponent }
     ]
   }
 ];

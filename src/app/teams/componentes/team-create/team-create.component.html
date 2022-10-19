@@ -1,5 +1,5 @@
 <div class="container-fluid mt-3">
-  <mat-card>
+  <mat-card class="mat-elevation-z5">
   <h1 class="text-center">Cadastro times</h1>
     <form [formGroup]="novoTime">
       <div class="row g-3" formGroupName="infos">
@@ -36,16 +36,26 @@
             <input matInput placeholder="Ex. 279" formControlName="numero" />
           </mat-form-field>
         </div>
-        <div class="col-md-6 col-sm-6">
+        <div class="col-md-4 col-sm-4">
           <mat-form-field class="example-full-width w-100" appearance="fill">
             <mat-label>Cidade</mat-label>
              <input matInput placeholder="Ex. São Paulo" formControlName="localidade" />
           </mat-form-field>
         </div>
-        <div class="col-md-6 col-sm-6">
+        <div class="col-md-4 col-sm-4">
           <mat-form-field class="example-full-width w-100" appearance="fill">
             <mat-label>Estado</mat-label>
             <input matInput placeholder="Ex. São Paulo" formControlName="uf" />
+          </mat-form-field>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <mat-form-field appearance="fill">
+            <mat-label>Divisão do time</mat-label>
+            <mat-select formControlName="division">
+              <mat-option *ngFor="let d of divisao" [value]="d">
+                {{ d }}
+              </mat-option>
+            </mat-select>
           </mat-form-field>
         </div>
       </div>

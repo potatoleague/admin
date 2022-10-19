@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row justify-content-center mt-5">
-    <mat-card class="box-create">
+    <mat-card class="box-create mat-elevation-z5">
       <h1 class="text-center my-2">Cadastro liga</h1>
       <form class="example-form" [formGroup]="ligaForm">
         <mat-form-field class="example-full-width w-100" appearance="fill">
@@ -58,6 +58,11 @@
           </div>
         </div>
         <div class="d-flex justify-content-end">
+          <button class="d-flex justify-content-end me-2 mt-3" (click)="createLeague(ligaForm.value)" mat-raised-button
+            color="warn">
+            <mat-icon>reply</mat-icon>
+            Voltar
+          </button>
           <button class="d-flex justify-content-end mt-3" (click)="createLeague(ligaForm.value)" mat-raised-button
             color="primary">
             <mat-icon>add</mat-icon>

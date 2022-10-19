@@ -1,0 +1,13 @@
+<p>league-config works!</p>
+<mat-card>
+  <section class="example-section" [formGroup]="toppings">
+    <h4>Escolha os times que faz</h4>
+    <p class=" d-flex flex-column"><mat-checkbox *ngFor="let t of times">{{ t.name }}</mat-checkbox></p>
+  </section>
+
+  <section class="example-section" [formGroup]="toppings">
+    <h4>You chose:</h4>
+    {{toppings.value | json}}
+  </section>
+
+</mat-card>

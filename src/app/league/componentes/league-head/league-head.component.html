@@ -1,38 +1,43 @@
 <div class="container-fluid">
   <div class="mt-3 p-2">
-    <h1>Painel de controle</h1>
     <div class="row justify-content-between my-3">
       <form class="d-flex col-lg-6" role="search">
-        <input
-          class="form-control me-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
       </form>
       <div class="col-lg-2">
         <button mat-stroked-button color="primary" routerLink="new">Nova liga</button>
       </div>
     </div>
 
-    <table>
-    <thead>
-      <tr>
-        <th *ngFor="let col of displayedColumns" scope="col">{{ col }}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let league of leagues">
-        <td data-label="ID"> {{ league.id }} </td>
-        <td data-label="Início"> {{ league.name }} </td>
-        <td data-label="Name"> {{ league.date_ini }} </td>
-        <td data-label="Fim"> {{ league.date_fim }} </td>
-        <td data-label="Ações" class="align-middle">
-          <div class="d-flex justify-content-end align-items-end flex-column">
-          <button type="button" routerLink="update" mat-stroked-button color="primary" class="btn-sm w-50 my-1">Editar</button>
-          <button type="button" mat-stroked-button class="btn-sm w-50">Configurar</button>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+    <mat-card class="mat-elevation-z5" *ngIf="leagues.length != 0; else noVisible">
+      <table>
+        <thead>
+          <tr>
+            <th *ngFor="let col of displayedColumns" scope="col">{{ col }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let league of leagues">
+            <td data-label="ID"> {{ league.id }} </td>
+            <td data-label="Início"> {{ league.name }} </td>
+            <td data-label="Name"> {{ league.dt_inicio }} </td>
+            <td data-label="Fim"> {{ league.dt_fim }} </td>
+            <td data-label="Ações" class="align-middle">
+              <div class="d-flex justify-content-end align-items-end flex-column">
+                <button type="button" routerLink="update/{{ league.id }}" mat-stroked-button color="primary"
+                  class="btn-sm w-50 my-1">Editar</button>
+                <button type="button" routerLink="{{league.id}}/config" mat-stroked-button
+                  class="btn-sm w-50">Configurar</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </mat-card>
+  </div>
+  <ng-template #noVisible class="d-flex justify-content-center align-items-center">
+    <div class="alert alert-dark" role="alert">
+      Não existem ligas cadastradas! Para configurar, você primeiro deve criar a primeira.
+    </div>
+  </ng-template>
+</div>
