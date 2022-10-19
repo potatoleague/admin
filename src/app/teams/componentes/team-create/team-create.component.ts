@@ -10,6 +10,7 @@ import { ViacepService } from 'src/app/shared/services/viacep.service';
 export class TeamCreateComponent implements OnInit {
 
   novoTime!: FormGroup;
+  divisao = ['Série Ouro', 'Série Prata', 'Série Bronze']
 
   constructor(
     private fb: FormBuilder,
@@ -29,6 +30,7 @@ export class TeamCreateComponent implements OnInit {
         complemento: [''],
         localidade: [''],
         uf: [''],
+        division:['']
       })
     });
   }

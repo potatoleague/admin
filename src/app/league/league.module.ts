@@ -8,6 +8,7 @@ import { LeagueCreateComponent } from './componentes/league-create/league-create
 import { LeagueUpdateComponent } from './componentes/league-update/league-update.component';
 import { InitComponent } from './componentes/init/init.component';
 import { HeaderComponent } from '../shared/header/header.component';
+import { LeagueConfigComponent } from './componentes/league-config/league-config.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { HeaderComponent } from '../shared/header/header.component';
     LeagueHeadComponent,
     LeagueCreateComponent,
     LeagueUpdateComponent,
-    InitComponent
+    InitComponent,
+    LeagueConfigComponent
   ],
   imports: [
     CommonModule,
