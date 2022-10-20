@@ -22,7 +22,7 @@
   position: absolute;
   display: flex;
   top: 120px;
-  padding: 0 3rem;
+  padding: 0 6%;
   width: 100%;
 }
 
@@ -30,7 +30,7 @@
   position: absolute;
   padding-top: 30px;
   margin-left: 110px;
-  color:#0049A7;
+  color: #0049A7;
 }
 
 .title-time {
@@ -44,11 +44,40 @@ a {
   color: #0049A7;
 }
 
+.wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+
+  .ficha-tecnica {
+    line-height: 22px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .line-title {
+    color: #0049A7;
+    font-weight: 900;
+  }
+
+  .m-border-left {
+    border-left: 1px solid #0049A7;
+  }
+  
+  .m-border-bottom {
+    border-bottom: 1px solid #0049A7;
+    padding-bottom: 2rem;
+  }
+}
+
 @media screen and (max-width: 648px) {
   .title-time {
     font-size: 1.7rem;
     color: #0049A7;
   }
+}
+
+.margin-space {
+  margin: 1rem 2rem;
 }
 
 @media screen and (max-width: 468px) {
@@ -71,5 +100,11 @@ a {
   .inter .title-time {
     position: absolute;
     margin-left: 90px;
+  }
+
+  .ficha-tecnica {
+    line-height: 22px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
