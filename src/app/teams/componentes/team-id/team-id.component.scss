@@ -22,7 +22,7 @@
   position: absolute;
   display: flex;
   top: 120px;
-  padding: 0 3rem;
+  padding: 0 6%;
   width: 100%;
 }
 
@@ -30,7 +30,7 @@
   position: absolute;
   padding-top: 30px;
   margin-left: 110px;
-  color:#0049A7;
+  color: #0049A7;
 }
 
 .title-time {
@@ -42,6 +42,53 @@
 a {
   text-decoration: none;
   color: #0049A7;
+}
+
+.flex-gap:not(:last-child) {
+  padding: 2px 0 0 5px;
+}
+
+.flex-gap:last-child {
+  padding: 2px 0 0 5px;
+}
+
+// .flex-gap {
+//   display: inline-flex;
+//   flex-wrap: wrap;
+//   gap: 12px;
+// }
+
+.wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+
+  .ficha-tecnica {
+    line-height: 22px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .line-title {
+    color: #0049A7;
+    font-weight: 900;
+  }
+
+  .m-border-left {
+    border-left: 1px solid #0049A7;
+  }
+
+  .m-border-bottom {
+    border-bottom: 1px solid #0049A7;
+    padding-bottom: 2rem;
+  }
+}
+
+.margin-space {
+  margin: 1rem 2rem;
+}
+
+.margin-space-2 {
+  margin: 1rem 0 0 2rem;
 }
 
 @media screen and (max-width: 648px) {
@@ -71,5 +118,15 @@ a {
   .inter .title-time {
     position: absolute;
     margin-left: 90px;
+  }
+
+  .ficha-tecnica {
+    line-height: 22px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .margin-space-2 {
+    margin: 1rem 2rem;
   }
 }

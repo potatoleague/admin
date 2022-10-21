@@ -11,7 +11,63 @@
     </div>
   </div>
 
-  <div class="row ms-4">
-    ficha tecnica
+  <div class="wrapper">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-xs-12 ficha-tecnica py-2">
+        <div class="margin-space m-border-bottom">
+          <h1 class="line-title">Ficha Técnica</h1>
+
+          <div class="my-2">
+            <strong>Presidente</strong><br />
+            <small>Alexandre Donizeti Guedes</small><br />
+          </div>
+
+          <div class="my-2">
+            <strong>Endereço</strong><br />
+            <small
+              >Rua Escritor José Mauro de Vasconcelos, 279 - Planalto Verde<br />
+              Telefone: (16) 99100-8358
+            </small>
+          </div>
+
+          <div class="my-2">
+            <strong>Fundação</strong><br />
+            <small>07/04/1983<br /> </small>
+          </div>
+        </div>
+        <div class="margin-space m-border-bottom">
+          <h1 class="line-title">Estádio</h1>
+          <div class="d-flex justify-content-center">
+            <img
+              src="https://img2.gratispng.com/20180522/paw/kisspng-drawing-coloring-book-stadium-clip-art-football-stadium-5b0486f844e4d4.9294030315270233522822.jpg "
+              alt=""
+              width="80%"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8 col-md-8 col-xs-12 m-border-left ficha-tecnica">
+        <div class="margin-space-2">
+          <h1 class="line-title">Elenco</h1>
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-4 col-md-6 col-xs-6 flex-gap" *ngFor="let d of [1, 2, 3, 4, 5, 6, 7]">
+              <mat-card
+                class="mt-2 d-flex py-3">
+                <img
+                  src="assets/images/player.jpg"
+                  alt=""
+                  width="35%"
+                />
+                <div class="d-flex flex-column justify-content-end ms-3">
+                  <small>Kokhym</small>
+                  <small><strong>Posição</strong>: Atacante</small>
+                </div>
+
+              </mat-card>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
