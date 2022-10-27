@@ -1,1 +1,38 @@
-<p>player-head works!</p>
+<div class="container">
+  <div class="row mt-3">
+    <div class="col-6 col-lg-4 col-md-4">
+      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+        <option selected>Listar por</option>
+        <option value="1">Time</option>
+        <option value="2">Jogadores</option>
+      </select>
+    </div>
+
+    <div class="col-6 col-lg-4 col-md-4">
+      <button routerLink="novo" mat-button color="primary">Primary</button>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-12 text-center">
+      <a href="#" *ngFor="let char of alphabet">
+        <span class="alphabet"> {{ char }} </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="row atletas mt-5">
+    <ul class="d-flex justify-content-around flex-grow-1 flex-wrap">
+      <li class="nav-item" *ngFor="let j of [1, 2, 3, 4, 5, 6]; let i = index">
+        <a class="nav-link active" aria-current="page" routerLink="jogador/{{i}}">
+          <img src="https://conteudo.fpf.org.br/atletas/40693073896/foto/12072022110954446.jpg" alt="">
+          <div>
+            <h6 class="m-0">Kokhym</h6>
+            <p>Alexandre Guedes - 39 anos</p>
+            <span>São Paulo FC</span>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
