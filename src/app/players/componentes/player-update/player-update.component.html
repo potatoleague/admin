@@ -1,1 +1,118 @@
-<p>player-update works!</p>
+<div class="container d-flex justify-content-center">
+  <div class="box-register mt-5 mat-elevation-z8">
+    <h1 class="text-center title my-3">Atualizar atleta</h1>
+    <!-- lado A -->
+    <div class="row p-3  my-3">
+      <div class="col-lg-8 col-md-12">
+        <form class="row g-3">
+          <div class="col-xl-12 col-lg-8 col-md-12">
+            <mat-form-field class="example-full-width w-100" appearance="fill">
+              <mat-label>Nome</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-4">
+            <mat-form-field class="example-full-width w-100" appearance="fill">
+              <mat-label>Apelido</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-4">
+            <mat-form-field appearance="fill" class="w-100">
+              <mat-label>Select</mat-label>
+              <mat-select>
+                <!-- <mat-option *ngFor="let t of tipo" [value]="t"> {{ t }} </mat-option> -->
+                <mat-option>Lateral</mat-option>
+                <mat-option>Zagueiro</mat-option>
+                <mat-option>Volante</mat-option>
+                <mat-option>Meia</mat-option>
+                <mat-option>Atacante</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-4">
+            <mat-form-field appearance="fill" class="w-100">
+              <mat-label>Início</mat-label>
+              <input matInput [matDatepicker]="picker" />
+              <mat-hint>MM/DD/YYYY</mat-hint>
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6">
+            <mat-form-field class="example-full-width w-100" appearance="fill">
+              <mat-label>RG</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6">
+            <mat-form-field class="example-full-width w-100" appearance="fill">
+              <mat-label>CPF</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-3">
+            <mat-form-field class="example-full-width w-100" appearance="fill">
+              <mat-label>CEP</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <div class="col-12 col-10 col-7 col-xl-7 col-lg-7 col-md-7 col-sm-12">
+            <mat-form-field class="example-full-width w-100" appearance="fill">
+              <mat-label>Endereço</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <div class="col-6 col-xl-2 col-lg-2 col-md-2 col-sm-6">
+            <mat-form-field class="example-full-width w-100" appearance="fill">
+              <mat-label>Número</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <div class="col-6 col-4 col-xl-4 col-lg-4 col-md-4 col-sm-6">
+            <mat-form-field class="example-full-width w-100" appearance="fill">
+              <mat-label>Complemento</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <div class="col-6 col-4 col-xl-4 col-lg-4 col-md-4 col-sm-6">
+            <mat-form-field class="example-full-width w-100" appearance="fill">
+              <mat-label>Cidade</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <div class="col-6 col-xl-4 col-lg-4 col-md-4 col-sm-6">
+            <mat-form-field appearance="fill" class="w-100">
+              <mat-label>Select</mat-label>
+              <mat-select>
+                <!-- <mat-option *ngFor="let t of tipo" [value]="t"> {{ t }} </mat-option> -->
+                <mat-option>Lateral</mat-option>
+                <mat-option>Zagueiro</mat-option>
+                <mat-option>Volante</mat-option>
+                <mat-option>Meia</mat-option>
+                <mat-option>Atacante</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </form>
+      </div>
+      <!-- lado B -->
+      <div class="col-lg-4 col-md-12 mt-1">
+        <div class="inputs-div">
+          <label for="inputTag">
+            Select Image <br />
+            <!-- <i class="fa fa-2x fa-camera"></i> -->
+            <img src="https://futstaff.com.br/staffequipe/static/img/avatar.png" width="70%" alt="" />
+            <input id="inputTag" type="file" />
+            <br />
+            <span id="imageName"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 d-flex justify-content-end">
+      <button class="w-50" mat-button color="primary">Salvar</button>
+    </div>
+  </div>
+</div>
