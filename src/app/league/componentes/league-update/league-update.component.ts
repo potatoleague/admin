@@ -49,8 +49,8 @@ export class LeagueUpdateComponent implements OnInit {
       next: (data: Liga) => {
         this.ligaForm.patchValue({
           name: data.name,
-          dt_inicio: this.formatDate(data.dt_inicio),
-          dt_fim: this.formatDate(data.dt_fim),
+          dt_inicio: data.dt_inicio,
+          dt_fim: data.dt_fim,
           type_liga: data.type_liga,
           type_campo: data.type_campo
         });
@@ -74,8 +74,8 @@ export class LeagueUpdateComponent implements OnInit {
     });
   }
 
-  formatDate(date: any) {
-    let teste = date.getTime();
-    console.log('teste', teste);
-  }
+  // formatDate(date: any) {
+  //   let teste = date.getTime();
+  //   console.log('teste', teste);
+  // }
 }

@@ -55,3 +55,10 @@
 /* .inputs-div #imageName {
   color: green;
 } */
+
+@media screen and (max-width: 567px) {
+  .box-register {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+}

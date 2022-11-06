@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: '', component: InitComponent, children:
     [
       { path: '', component: PlayerHeadComponent },
-      { path: 'novo', component: PlayerCreateComponent },
+      { path: 'cadastrar', component: PlayerCreateComponent },
       { path: 'jogador/:id', component: PlayerUpdateComponent }
     ]
   }

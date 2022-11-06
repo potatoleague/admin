@@ -1,6 +1,7 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { LeagueService } from 'src/app/shared/services/leagueService/league.service';
 
 @Component({
   selector: 'app-league-create',
@@ -20,7 +21,8 @@ export class LeagueCreateComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private ligaService: LeagueService
   ) { }
 
   ngOnInit(): void {
@@ -35,6 +37,7 @@ export class LeagueCreateComponent implements OnInit {
 
   createLeague(form: any) {
     console.log('nova-liga', form);
+
     this.router.navigate(['/painel-controle']);
   }
 
