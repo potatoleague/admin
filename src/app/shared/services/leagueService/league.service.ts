@@ -16,11 +16,16 @@ export class LeagueService {
   getAllLeagues() {
     return this.http.get<Liga>(`${environment.baseUrl}/${this.uri}`);
   }
+
   getLeagueById(id: number) {
     return this.http.get<Liga>(`${environment.baseUrl}/${this.uri}/${id}`);
   }
 
   updateLeague(id: number, form: Liga) {
     return this.http.put<Liga>(`${environment.baseUrl}/${this.uri}/${id}`, form);
+  }
+
+  createLeague(form: Liga) {
+    return this.http.post<Liga>(`${environment.baseUrl}/${this.uri}`, form);
   }
 }

@@ -35,10 +35,10 @@ export class LeagueUpdateComponent implements OnInit {
 
     this.ligaForm = this.fb.group({
       name: [''],
-      dt_inicio: [''],
-      dt_fim: [''],
-      type_liga: [''],
-      type_campo: ['']
+      dt_start: [''],
+      dt_end: [''],
+      system: [''],
+      mode: ['']
     });
 
     this.getLeagueId();
@@ -49,10 +49,10 @@ export class LeagueUpdateComponent implements OnInit {
       next: (data: Liga) => {
         this.ligaForm.patchValue({
           name: data.name,
-          dt_inicio: data.dt_inicio,
-          dt_fim: data.dt_fim,
-          type_liga: data.type_liga,
-          type_campo: data.type_campo
+          dt_start: data.dt_start,
+          dt_end: data.dt_end,
+          system: data.system,
+          mode: data.mode
         });
         console.log('getLeagueId', data);
       },

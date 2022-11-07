@@ -14,7 +14,7 @@
             <div class="col-lg-6 col-md-6">
               <mat-form-field appearance="fill" class="w-100">
                 <mat-label>Início</mat-label>
-                <input matInput [matDatepicker]="picker" formControlName="dt_ini" />
+                <input matInput [matDatepicker]="picker" formControlName="dt_start" />
                 <mat-hint>MM/DD/YYYY</mat-hint>
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
@@ -24,7 +24,7 @@
             <div class="col-lg-6 col-md-6">
               <mat-form-field appearance="fill"  class="w-100">
                 <mat-label>Fim</mat-label>
-                <input matInput [matDatepicker]="picker_one" formControlName="dt_fim" />
+                <input matInput [matDatepicker]="picker_one" formControlName="dt_end" />
                 <mat-hint>MM/DD/YYYY</mat-hint>
                 <mat-datepicker-toggle matSuffix [for]="picker_one"></mat-datepicker-toggle>
                 <mat-datepicker #picker_one></mat-datepicker>
@@ -38,9 +38,9 @@
 
             <div class="col-lg-6 col-md-6">
               <mat-form-field appearance="fill" class="w-100">
-                <mat-label>Tipo de disputa</mat-label>
-                <mat-select formControlName="t_disputa">
-                  <mat-option *ngFor="let d of disputa" [value]="d.id">
+                <mat-label>Sistema de disputa</mat-label>
+                <mat-select formControlName="system">
+                  <mat-option *ngFor="let d of disputa" [value]="d.name">
                     {{ d.name }}
                   </mat-option>
                 </mat-select>
@@ -49,8 +49,8 @@
 
             <div class="col-lg-6 col-md-6">
               <mat-form-field appearance="fill" class="w-100">
-                <mat-label>Select</mat-label>
-                <mat-select formControlName="t_campo">
+                <mat-label>Modalidade</mat-label>
+                <mat-select formControlName="mode">
                   <mat-option *ngFor="let t of tipo" [value]="t"> {{ t }} </mat-option>
                 </mat-select>
               </mat-form-field>
