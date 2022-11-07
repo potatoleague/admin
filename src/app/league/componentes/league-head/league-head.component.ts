@@ -18,20 +18,20 @@ export class LeagueHeadComponent implements OnInit {
     // {
     //   id: 1,
     //   name: 'League A',
-    //   date_ini: '01/07/2023',
-    //   date_fim: '07/07/2023',
+    //   dt_inicio: '01/07/2023',
+    //   dt_fim: '07/07/2023',
     // },
     // {
     //   id: 2,
     //   name: 'League B',
-    //   date_ini: '02/07/2023',
-    //   date_fim: '08/07/2023',
+    //   dt_inicio: '02/07/2023',
+    //   dt_fim: '08/07/2023',
     // },
     // {
     //   id: 3,
     //   name: 'League C',
-    //   date_ini: '03/07/2023',
-    //   date_fim: '09/07/2023',
+    //   dt_inicio: '03/07/2023',
+    //   dt_fim: '09/07/2023',
     // },
   ];
 

@@ -1,0 +1,64 @@
+.box-register {
+  background-color: #FFF;
+  width: 80%;
+  padding: 1rem;
+}
+
+.bd-right {
+  border-right: 1px solid #999;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-label {
+  padding: 20px 10px;
+  width: auto;
+  height: auto;
+  /* background-color: #333; */
+  /* border: 1px solid #333; */
+  color: #333;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.div-file-input {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  height: 300px;
+}
+
+.inputs-div {
+  text-align: center;
+  padding: 3%;
+  border: dashed 2px black;
+  height: auto;
+}
+
+.inputs-div input {
+  display: none;
+}
+
+.inputs-div label {
+  cursor: pointer;
+}
+
+/* .inputs-div #imageName {
+  color: green;
+} */
+
+@media screen and (max-width: 567px) {
+  .box-register {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+}

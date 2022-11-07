@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: '', component: InitComponent,
     children: [
       { path: '', component: TeamHeadComponent },
-      { path: 'novo-time', component: TeamCreateComponent },
+      { path: 'cadastrar', component: TeamCreateComponent },
       { path: 'update-time/:id', component: TeamUpdateComponent },
       { path: 'time/:id', component: TeamIdComponent }
     ]
