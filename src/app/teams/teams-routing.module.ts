@@ -12,7 +12,7 @@ const routes: Routes = [
       { path: '', component: TeamHeadComponent },
       { path: 'cadastrar', component: TeamCreateComponent },
       { path: 'update-time/:id', component: TeamUpdateComponent },
-      { path: 'time/:id', component: TeamIdComponent }
+      { path: ':apelido/:id', component: TeamIdComponent }
     ]
   }
 ];

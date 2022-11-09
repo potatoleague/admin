@@ -61,7 +61,7 @@ ul {
 }
 
 .rs-title {
-  font-size: 16px;
+    font-size: 16px;
     font-weight: 700;
     color: #D94B54;
     text-transform: uppercase;
@@ -81,4 +81,8 @@ ul {
 
 .bg-primary-gradient {
     background-image: linear-gradient(to right top, #1f187a, #34267c, #44347d, #52427f, #5e5080);
+}
+
+form {
+    font-size: 13px;
 }

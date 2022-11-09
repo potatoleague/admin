@@ -5,7 +5,7 @@
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
       </form>
       <div class="col-lg-2">
-        <button mat-stroked-button color="primary" routerLink="new">Nova liga</button>
+        <button mat-raised-button color="primary" routerLink="new">Nova liga</button>
       </div>
     </div>
 
@@ -24,9 +24,9 @@
             <td data-label="Fim"> {{ league.dt_end }} </td>
             <td data-label="Ações" class="align-middle">
               <div class="d-flex justify-content-end align-items-end flex-column">
-                <button type="button" routerLink="update/{{ league.id }}" mat-stroked-button color="primary"
+                <button type="button" routerLink="update/{{ league.id }}" mat-raised-button color="primary"
                   class="btn-sm w-50 my-1">Editar</button>
-                <button type="button" routerLink="{{league.id}}/config" mat-stroked-button
+                <button type="button" routerLink="{{league.id}}/config" mat-raised-button
                   class="btn-sm w-50">Configurar</button>
               </div>
             </td>

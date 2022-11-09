@@ -29,8 +29,8 @@ export class LeagueCreateComponent implements OnInit {
   ngOnInit(): void {
     this.ligaForm = this.fb.group({
       name: [''],
-      dt_start: ['2022-01-01'],
-      dt_end: ['2022-01-01'],
+      dt_start: [''],
+      dt_end: [''],
       system: [''],
       mode: ['']
     });

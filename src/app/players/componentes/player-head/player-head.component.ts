@@ -1,4 +1,3 @@
-import { Times } from './../../../model/Player/player';
 import { Component, OnInit } from '@angular/core';
 import { PlayerService } from 'src/app/shared/services/playerService/player.service';
 
@@ -9,14 +8,15 @@ import { PlayerService } from 'src/app/shared/services/playerService/player.serv
 })
 export class PlayerHeadComponent implements OnInit {
   alphabet: string[] = [];
+  atletas: any = [];
 
   constructor(
-    private timeService: PlayerService
+    private atletaService: PlayerService
   ) { }
 
   ngOnInit(): void {
     this.alphabethList();
-    this.allPayers();
+    this.getAllPlayers();
   }
 
   alphabethList() {
@@ -24,10 +24,11 @@ export class PlayerHeadComponent implements OnInit {
     this.alphabet = alpha.map((x) => String.fromCharCode(x));
   }
 
-  allPayers() {
-    this.timeService.getAllPlayers().subscribe({
-      next: (data: Times) => {
-        console.log('allPayers', data)
+  getAllPlayers() {
+    this.atletaService.getAllPlayers().subscribe({
+      next: (data) => {
+        this.atletas = data;
+        console.log('getAllPlayers', data);
       }
     });
   }
