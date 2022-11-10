@@ -1,6 +1,6 @@
 export interface Atleta {
-	id?: number,
-	name: string,
-	apelido: string,
-	posicao: string
+	id?: number;
+	name: string;
+	apelido: string;
+	posicao: string;
 }

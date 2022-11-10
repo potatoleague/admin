@@ -2,8 +2,8 @@
 
   <div class="interno mb-5">
     <div class="inter">
-      <img class="img-time" [src]="equipe.url" alt="" />
-      <p class="title-time"> {{ equipe.nome }} </p>
+      <img class="img-time" [src]="equipe.img_scudo" alt="" />
+      <p class="title-time"> {{ equipe.name }} </p>
     </div>
   </div>
 
@@ -15,13 +15,13 @@
 
           <div class="my-2">
             <strong>Presidente</strong><br />
-            <small>{{ equipe.presidente }}</small><br />
+            <small>{{ equipe.president }}</small><br />
           </div>
 
           <div class="my-2">
             <strong>Endereço</strong><br />
             <small>{{ equipe.logradouro }}, {{ equipe.numero }} - {{ equipe.bairro }}<br />
-              Telefone: {{ equipe.telefone }}
+              Telefone: {{ equipe.phone }}
             </small>
           </div>
 
@@ -33,7 +33,7 @@
         <div class="margin-space m-border-bottom">
           <h1 class="line-title">Estádio</h1>
           <div class="d-flex justify-content-center">
-            <img [src]="equipe.foto_estadio" alt="" width="80%" />
+            <img [src]="equipe.img_stadium" alt="" width="80%" />
           </div>
         </div>
       </div>
@@ -42,12 +42,12 @@
           <h1 class="line-title">Elenco</h1>
           <div class="row d-flex justify-content-center">
             <div class="col-lg-4 col-md-6 col-xs-6 flex-gap" *ngFor="let d of equipe.atletas">
-              <mat-card class="mt-2 d-flex py-3">
+              <mat-card class="mt-2 d-flex p-2">
                 <a class="text-center d-flex" routerLink="/">
                   <img src="assets/images/player.jpg" alt="" width="35%" />
-                  <div class="d-flex flex-column justify-content-end ms-3">
-                    <small> {{ d.apelido }} </small>
-                    <small><strong>Posição</strong>: {{ d.posicao }}</small>
+                  <div class="d-flex flex-column align-items-start justify-content-end ms-2">
+                    <small style="color: #000;"> {{ d.surname }} </small>
+                    <small>{{ d.position }}</small>
                   </div>
                 </a>
               </mat-card>
