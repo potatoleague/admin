@@ -20,8 +20,8 @@
           <tr *ngFor="let league of leagues">
             <td data-label="ID"> {{ league.id }} </td>
             <td data-label="Início"> {{ league.name }} </td>
-            <td data-label="Name"> {{ league.dt_start }} </td>
-            <td data-label="Fim"> {{ league.dt_end }} </td>
+            <td data-label="Name"> {{ league.dt_start | date: 'dd/MM/yyyy' }} </td>
+            <td data-label="Fim"> {{ league.dt_end | date: 'dd/MM/yyyy' }} </td>
             <td data-label="Ações" class="align-middle">
               <div class="d-flex justify-content-end align-items-end flex-column">
                 <button type="button" routerLink="update/{{ league.id }}" mat-raised-button color="primary"

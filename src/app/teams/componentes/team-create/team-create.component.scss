@@ -1,6 +1,20 @@
 h1 {
   margin-bottom: 3rem;
 }
+.inputs-div {
+  text-align: center;
+  padding: 3%;
+  border: dashed 2px black;
+  height: auto;
+}
+
+.inputs-div input {
+  display: none;
+}
+
+.inputs-div label {
+  cursor: pointer;
+}
 
 @media (min-width: 992px) {
   .mat-card {
