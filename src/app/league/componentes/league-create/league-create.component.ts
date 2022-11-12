@@ -1,7 +1,6 @@
-import { Liga } from 'src/app/model/League/liga';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { LeagueService } from 'src/app/shared/services/leagueService/league.service';
 
 @Component({
@@ -37,17 +36,19 @@ export class LeagueCreateComponent implements OnInit {
   }
 
   createLeague(form: any) {
-    console.log('nova-liga', form);
-    this.ligaService.createLeague(form).subscribe({
-      next: (data: Liga) => {
+    let obj: any = {
+      ...form, status: true
+    }
+    console.log('nova-liga', obj);
+    this.ligaService.createLeague(obj).subscribe({
+      next: (data) => {
         console.log('createLeague', data);
+        this.router.navigate(['/painel-controle']);
       },
       error: (err) => {
         console.log('err', err);
       }
     });
-
-    this.router.navigate(['/painel-controle']);
   }
 
 }

@@ -25,9 +25,16 @@
             </small>
           </div>
 
-          <div class="my-2">
-            <strong>Fundação</strong><br />
-            <small>{{ equipe.dt_nascimento | date: 'dd/MM/yyyy' }}<br /> </small>
+          <div class="my-2 d-flex align items-center justify-content-between">
+            <div class="left">
+              <strong>Fundação</strong><br />
+              <small>{{ equipe.dt_nascimento | date: 'dd/MM/yyyy' }}<br /> </small>
+            </div>
+            <div class="rigth">
+              <button mat-icon-button color="primary" (click)="goUpdate()">
+                <mat-icon>edit</mat-icon>
+              </button>
+            </div>
           </div>
         </div>
         <div class="margin-space m-border-bottom">
@@ -39,18 +46,27 @@
       </div>
       <div class="col-lg-8 col-md-8 col-xs-12 m-border-left ficha-tecnica">
         <div class="margin-space-2">
-          <h1 class="line-title">Elenco</h1>
+          <div class="d-flex justify-content-between">
+            <h1 class="line-title">Elenco</h1>
+            <button mat-raised-button routerLink="/atletas/cadastrar" color="primary">Cadastrar atleta</button>
+          </div>
           <div class="row d-flex justify-content-center">
-            <div class="col-lg-4 col-md-6 col-xs-6 flex-gap" *ngFor="let d of equipe.atletas">
-              <mat-card class="mt-2 d-flex p-2">
-                <a class="text-center d-flex" routerLink="/">
-                  <img src="assets/images/player.jpg" alt="" width="35%" />
-                  <div class="d-flex flex-column align-items-start justify-content-end ms-2">
-                    <small style="color: #000;"> {{ d.surname }} </small>
+            <div class="col-lg-4 col-md-6 col-xs-6 flex-gap" *ngFor="let d of atletas">
+              <mat-card class="mt-2 d-flex p-2" *ngIf="d.length != 0; else noTeams">
+                <img src="assets/images/player.jpg" alt="" width="35%" />
+                <div class="d-flex flex-column align-items-start justify-content-end mx-2 w-100">
+                  <small style="color: #000;"> {{ d.surname }} </small>
+                  <div class="div d-flex justify-content-between  w-100">
                     <small>{{ d.position }}</small>
+                    <a routerLink="/atletas/{{d.id}}"><small> <mat-icon>info</mat-icon> </small></a>
                   </div>
-                </a>
+                </div>
               </mat-card>
+              <ng-template #noTeams class="d-flex justify-content-center align-items-center">
+                <div class="alert alert-dark" role="alert">
+                  Não existem atletas cadastrados! Clique em cadastro para inserir novos!
+                </div>
+              </ng-template>
             </div>
           </div>
         </div>

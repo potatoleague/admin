@@ -11,7 +11,7 @@ const routes: Routes = [
     children: [
       { path: '', component: TeamHeadComponent },
       { path: 'cadastrar', component: TeamCreateComponent },
-      { path: 'update-time/:id', component: TeamUpdateComponent },
+      { path: 'update/:id', component: TeamUpdateComponent },
       { path: ':apelido/:id', component: TeamIdComponent }
     ]
   }

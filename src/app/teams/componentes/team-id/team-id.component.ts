@@ -1,7 +1,5 @@
-import { Time } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Equipe } from 'src/app/model/Teams/Time';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TeamsService } from 'src/app/shared/services/teamService/teams.service';
 
 @Component({
@@ -12,10 +10,14 @@ import { TeamsService } from 'src/app/shared/services/teamService/teams.service'
 export class TeamIdComponent implements OnInit {
   id_time: String = '';
   equipe: any = [];
+  atletas: any = [{
+    id: 1, surname: 'Kokhym', position: 'Atacante'
+  }];
 
   constructor(
     private actvRouter : ActivatedRoute,
-    private teamService: TeamsService
+    private teamService: TeamsService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -32,7 +34,11 @@ export class TeamIdComponent implements OnInit {
       error: (err) => {
         console.log('err', err);
       }
-    })
+    });
+  }
+
+  goUpdate() {
+    this.router.navigate([`times/update/${this.id_time}`]);
   }
 
 }

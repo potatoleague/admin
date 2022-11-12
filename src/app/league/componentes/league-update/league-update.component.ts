@@ -2,7 +2,6 @@ import { LeagueService } from './../../../shared/services/leagueService/league.s
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { Liga } from 'src/app/model/League/liga';
 
 @Component({
   selector: 'app-league-update',
@@ -46,7 +45,7 @@ export class LeagueUpdateComponent implements OnInit {
 
   getLeagueId() {
     this.leagueService.getLeagueById(this.id).subscribe({
-      next: (data: Liga) => {
+      next: (data) => {
         this.ligaForm.patchValue({
           name: data.name,
           dt_start: data.dt_start,
@@ -65,7 +64,7 @@ export class LeagueUpdateComponent implements OnInit {
   createLeague(form: any) {
     console.log('nova-liga', form);
     this.leagueService.updateLeague(this.id, form).subscribe({
-      next: (data: Liga) => {
+      next: (data) => {
         console.log('OI');
         this.router.navigate(['/painel-controle']);
       }, error: (err) => {

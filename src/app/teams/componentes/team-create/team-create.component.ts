@@ -66,7 +66,7 @@ export class TeamCreateComponent implements OnInit {
         this.equipes = data;
         console.log(data);
       }
-    })
+    });
   }
 
   save(form: any) {
@@ -79,7 +79,7 @@ export class TeamCreateComponent implements OnInit {
       img_scudo: form.img_scudo ? form.img_scudo : null,
       img_stadium: form.img_stadium,
       initials: form.infos.initials,
-      liga_id: form.endereco.leagues,
+      ligas_id: form.endereco.leagues,
       logradouro: form.endereco.logradouro,
       name: form.infos.name,
       numero: form.endereco.numero,

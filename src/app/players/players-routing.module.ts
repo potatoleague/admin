@@ -1,3 +1,4 @@
+import { PlayerIdComponent } from './componentes/player-id/player-id.component';
 import { PlayerCreateComponent } from './componentes/player-create/player-create.component';
 import { PlayerUpdateComponent } from './componentes/player-update/player-update.component';
 import { NgModule } from '@angular/core';
@@ -10,7 +11,8 @@ const routes: Routes = [
     [
       { path: '', component: PlayerHeadComponent },
       { path: 'cadastrar', component: PlayerCreateComponent },
-      { path: 'jogador/:id', component: PlayerUpdateComponent }
+      { path: ':id', component: PlayerIdComponent },
+      { path: 'update/:id', component: PlayerUpdateComponent }
     ]
   }
 ];

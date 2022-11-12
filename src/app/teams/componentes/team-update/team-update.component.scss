@@ -1,0 +1,137 @@
+h1 {
+  margin-bottom: 3rem;
+}
+.inputs-div {
+  text-align: center;
+  padding: 3%;
+  border: dashed 2px black;
+  height: auto;
+}
+
+.inputs-div input {
+  display: none;
+}
+
+// inpus-file
+[type="file"] {
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}
+
+[type="file"] + label {
+  background: #f15d22;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+	font-family: 'Rubik', sans-serif;
+	font-size: inherit;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  outline: none;
+  padding: 0.5rem 40px;
+  position: relative;
+  transition: all 0.3s;
+  vertical-align: middle;
+
+  &:hover {
+    background-color: darken(#004993, 10%);
+  }
+
+  &.btn-1 {
+    background-color: #2684e2;
+    box-shadow: 0 6px darken(#2684e2, 10%);
+    transition: none;
+
+    &:hover {
+      box-shadow: 0 4px darken(#2684e2, 10%);
+      top: 2px;
+    }
+  }
+}
+
+.inputs-div label {
+  cursor: pointer;
+}
+
+.box-register {
+  background-color: #FFF;
+  width: 700px;
+  padding: 2rem;
+  margin: .5rem 0 1rem 0;
+}
+
+.bd-right {
+  border-right: 1px solid #999;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-label {
+  padding: 20px 10px;
+  width: auto;
+  height: auto;
+  /* background-color: #333; */
+  /* border: 1px solid #333; */
+  color: #333;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.div-file-input {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  height: 300px;
+}
+
+.inputs-div {
+  text-align: center;
+  padding: 3%;
+  border: dashed 2px black;
+  height: auto;
+}
+
+.inputs-div input {
+  display: none;
+}
+
+.inputs-div label {
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .mat-card {
+    width: 800px !important;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 768px) {
+  .mat-card {
+    width: 700px !important;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .mat-card {
+    width: 90% !important;
+    margin: 0 auto;
+  }
+
+  .box-register {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+}
