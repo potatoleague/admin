@@ -1,4 +1,4 @@
-import { Atleta } from './../../../model/Player/player';
+
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
@@ -14,7 +14,7 @@ export class PlayerService {
     private http: HttpClient
   ) { }
 
-  getAllPlayers(): Observable<Atleta[]> {
-    return this.http.get<Atleta[]>(`${environment.baseUrl}/${this.uri}`);
+  getAllPlayers(): Observable<any[]> {
+    return this.http.get<any[]>(`${environment.baseUrl}/${this.uri}`);
   }
 }

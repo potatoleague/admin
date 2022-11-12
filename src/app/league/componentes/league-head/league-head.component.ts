@@ -1,4 +1,3 @@
-import { Liga } from 'src/app/model/League/liga';
 import { LeagueService } from './../../../shared/services/leagueService/league.service';
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
@@ -14,7 +13,7 @@ export class LeagueHeadComponent implements OnInit {
   isVisible: boolean = false;
   displayedColumns: string[] = ['nome', 'início', 'fim', 'sitema', 'modalidade', 'status', 'ações'];
 
-  leagues:  Liga[] = [];
+  leagues:  any[] = [];
 
   dataSource = new MatTableDataSource(this.leagues);
   constructor(
@@ -29,7 +28,7 @@ export class LeagueHeadComponent implements OnInit {
   league() {
     console.log('displayedColumns', this.displayedColumns)
     this.leagueService.getAllLeagues().subscribe({
-      next: (data: Liga[]) => {
+      next: (data) => {
         this.leagues = data;
         this.isVisible = true;
         console.log(data);

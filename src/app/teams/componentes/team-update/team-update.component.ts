@@ -1,4 +1,3 @@
-import { Equipe } from 'src/app/model/Teams/Time';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TeamsService } from 'src/app/shared/services/teamService/teams.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';

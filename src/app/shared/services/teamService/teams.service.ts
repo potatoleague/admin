@@ -1,4 +1,3 @@
-import { Equipe } from 'src/app/model/Teams/Time';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
@@ -26,9 +25,9 @@ export class TeamsService {
     return this.http.post<any>(`${environment.baseUrl}/${this.uri}`, form);
   }
 
-  updateTeam(id: number, form: Equipe) {
+  updateTeam(id: number, form: any) {
     console.log('url ID', id)
-    return this.http.put<Equipe>(`${environment.baseUrl}/${this.uri}/${id}`, form);
+    return this.http.put<any>(`${environment.baseUrl}/${this.uri}/${id}`, form);
   }
 
 }
