@@ -23,6 +23,7 @@ export class TeamsService {
   }
 
   createTeam(form: Equipe) {
+    console.log('FORM CREATE', form);
     return this.http.post<Equipe>(`${environment.baseUrl}/${this.uri}`, form);
   }
 
