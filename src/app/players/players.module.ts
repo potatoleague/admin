@@ -7,6 +7,7 @@ import { PlayerCreateComponent } from './componentes/player-create/player-create
 import { PlayerUpdateComponent } from './componentes/player-update/player-update.component';
 import { InitComponent } from './componentes/init/init.component';
 import { MaterialModule } from '../shared/material.module';
+import { PlayerIdComponent } from './componentes/player-id/player-id.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { MaterialModule } from '../shared/material.module';
     PlayerHeadComponent,
     PlayerCreateComponent,
     PlayerUpdateComponent,
-    InitComponent
+    InitComponent,
+    PlayerIdComponent
   ],
   imports: [
     CommonModule,

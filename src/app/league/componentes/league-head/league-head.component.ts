@@ -1,8 +1,8 @@
+import { Liga } from 'src/app/model/League/liga';
 import { LeagueService } from './../../../shared/services/leagueService/league.service';
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
-import { Liga } from 'src/app/model/League/liga';
 
 @Component({
   selector: 'app-league-head',
@@ -12,28 +12,9 @@ import { Liga } from 'src/app/model/League/liga';
 export class LeagueHeadComponent implements OnInit {
 
   isVisible: boolean = false;
-  displayedColumns: string[] = ['id', 'nome', 'início', 'fim', 'ações'];
+  displayedColumns: string[] = ['nome', 'início', 'fim', 'sitema', 'modalidade', 'status', 'ações'];
 
-  leagues: any = [
-    // {
-    //   id: 1,
-    //   name: 'League A',
-    //   dt_inicio: '01/07/2023',
-    //   dt_fim: '07/07/2023',
-    // },
-    // {
-    //   id: 2,
-    //   name: 'League B',
-    //   dt_inicio: '02/07/2023',
-    //   dt_fim: '08/07/2023',
-    // },
-    // {
-    //   id: 3,
-    //   name: 'League C',
-    //   dt_inicio: '03/07/2023',
-    //   dt_fim: '09/07/2023',
-    // },
-  ];
+  leagues:  Liga[] = [];
 
   dataSource = new MatTableDataSource(this.leagues);
   constructor(
@@ -46,8 +27,9 @@ export class LeagueHeadComponent implements OnInit {
   }
 
   league() {
+    console.log('displayedColumns', this.displayedColumns)
     this.leagueService.getAllLeagues().subscribe({
-      next: (data: Liga) => {
+      next: (data: Liga[]) => {
         this.leagues = data;
         this.isVisible = true;
         console.log(data);

@@ -1,7 +1,6 @@
-import { Time } from '@angular/common';
+import { Equipe } from 'src/app/model/Teams/Time';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Equipe } from 'src/app/model/Teams/Time';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -15,16 +14,21 @@ export class TeamsService {
   ) { }
 
   getAllTeams() {
-    return this.http.get<Equipe>(`${environment.baseUrl}/${this.uri}`);
+    return this.http.get<any>(`${environment.baseUrl}/${this.uri}`);
   }
 
   getTeamById(id: number) {
-    return this.http.get<Equipe>(`${environment.baseUrl}/${this.uri}/${id}`);
+    return this.http.get<any[]>(`${environment.baseUrl}/${this.uri}/${id}`);
   }
 
-  createTeam(form: Equipe) {
+  createTeam(form: any) {
     console.log('FORM CREATE', form);
-    return this.http.post<Equipe>(`${environment.baseUrl}/${this.uri}`, form);
+    return this.http.post<any>(`${environment.baseUrl}/${this.uri}`, form);
+  }
+
+  updateTeam(id: number, form: Equipe) {
+    console.log('url ID', id)
+    return this.http.put<Equipe>(`${environment.baseUrl}/${this.uri}/${id}`, form);
   }
 
 }

@@ -1,8 +1,8 @@
+import { Liga } from 'src/app/model/League/liga';
 import { LeagueService } from './../../../shared/services/leagueService/league.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { Liga } from 'src/app/model/League/liga';
 
 @Component({
   selector: 'app-league-update',

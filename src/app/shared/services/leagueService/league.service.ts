@@ -1,6 +1,7 @@
+import { Liga } from 'src/app/model/League/liga';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Liga } from 'src/app/model/League/liga';
+import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -13,8 +14,8 @@ export class LeagueService {
     private http: HttpClient
   ) { }
 
-  getAllLeagues() {
-    return this.http.get<Liga>(`${environment.baseUrl}/${this.uri}`);
+  getAllLeagues(): Observable<Liga[]> {
+    return this.http.get<Liga[]>(`${environment.baseUrl}/${this.uri}`);
   }
 
   getLeagueById(id: number) {

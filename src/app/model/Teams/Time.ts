@@ -1,5 +1,3 @@
-import { Atleta } from "../Player/Player"
-
 export interface Equipe {
   id?: number,
 	name: string,
@@ -18,6 +16,5 @@ export interface Equipe {
 	status: string,
 	surname: string,
 	dt_nascimento: Date,
-  leagues: number,
-  atletas: Atleta[],
+  ligas_id: number,
 }
