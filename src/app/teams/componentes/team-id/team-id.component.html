@@ -51,14 +51,14 @@
             <button mat-raised-button routerLink="/atletas/cadastrar" color="primary">Cadastrar atleta</button>
           </div>
           <div class="row d-flex justify-content-center">
-            <div class="col-lg-4 col-md-6 col-xs-6 flex-gap" *ngFor="let d of atletas">
+            <div class="col-lg-4 col-md-6 col-xs-6 flex-gap" *ngFor="let d of equipe.contratos">
               <mat-card class="mt-2 d-flex p-2" *ngIf="d.length != 0; else noTeams">
                 <img src="assets/images/player.jpg" alt="" width="35%" />
                 <div class="d-flex flex-column align-items-start justify-content-end mx-2 w-100">
-                  <small style="color: #000;"> {{ d.surname }} </small>
+                  <small style="color: #000;"> {{ d.atleta.surname }} </small>
                   <div class="div d-flex justify-content-between  w-100">
-                    <small>{{ d.position }}</small>
-                    <a routerLink="/atletas/{{d.id}}"><small> <mat-icon>info</mat-icon> </small></a>
+                    <small>{{ d.atleta.position }}</small>
+                    <a routerLink="/atletas/{{d.atleta.id}}"><small> <mat-icon>info</mat-icon> </small></a>
                   </div>
                 </div>
               </mat-card>

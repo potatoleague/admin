@@ -33,12 +33,12 @@
   <div class="row atletas mt-5">
     <ul class="d-flex justify-content-around flex-grow-1 flex-wrap">
       <li class="nav-item" *ngFor="let j of atletas; let i = index">
-        <a class="nav-link active" aria-current="page" routerLink="jogador/{{j.id}}">
+        <a class="nav-link active" aria-current="page" routerLink="{{j.id}}">
           <img src="https://conteudo.fpf.org.br/atletas/40693073896/foto/12072022110954446.jpg" alt="">
           <div>
-            <h6 class="m-0"> {{ j.apelido }} </h6>
-            <p>{{ j.nome }}</p>
-            <span>São Paulo FC</span>
+            <h6 class="m-0"> {{ j.surname }} </h6>
+            <p>{{ j.name }}</p>
+            <span> {{ j.time.surname }} </span>
           </div>
         </a>
       </li>

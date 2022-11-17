@@ -23,20 +23,14 @@ export const menuData = [
     routerLink: '/login',
     icon: 'sports',
     label: 'SAIR'
-  },
-  // {
-  //   routerLink: '/home/rodadas',
-  //   icon: 'sports_soccer',
-  //   label: 'Rodadas'
-  // },
-  // {
-  //   routerLink: '/home/lista',
-  //   icon: 'sports_soccer',
-  //   label: 'Lista'
-  // },
-  // {
-  //   routerLink: '/home/confrontos',
-  //   icon: 'sports_soccer',
-  //   label: 'Confrontos'
-  // },
+  }
+]
+
+export const positions = [
+  { id: 0, position: 'Goleiro'},
+  { id: 1, position: 'Lateral'},
+  { id: 2, position: 'Zagueiro'},
+  { id: 3, position: 'Volante'},
+  { id: 4, position: 'Meia'},
+  { id: 5, position: 'Atacante'}
 ]
