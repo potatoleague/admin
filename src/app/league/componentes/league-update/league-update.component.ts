@@ -37,7 +37,8 @@ export class LeagueUpdateComponent implements OnInit {
       dt_start: [''],
       dt_end: [''],
       system: [''],
-      mode: ['']
+      mode: [''],
+      status: ['']
     });
 
     this.getLeagueId();
@@ -51,7 +52,8 @@ export class LeagueUpdateComponent implements OnInit {
           dt_start: data.dt_start,
           dt_end: data.dt_end,
           system: data.system,
-          mode: data.mode
+          mode: data.mode,
+          status: data.status
         });
         console.log('getLeagueId', data);
       },

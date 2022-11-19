@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamUpdateComponent implements OnInit {
   id_time: string = '';
+  id_liga: string = '';
   timeForm!: FormGroup;
   divisao = ['Série Ouro', 'Série Prata', 'Série Bronze'];
   equipe: any = [];
@@ -57,6 +58,7 @@ export class TeamUpdateComponent implements OnInit {
     this.teamService.getTeamById(+this.id_time).subscribe({
       next: (data) => {
         this.equipe = data;
+        this.id_liga = this.equipe.liga.id;
         this.timeForm.patchValue({
           infos: ({
             name: this.equipe.name,
@@ -95,11 +97,13 @@ export class TeamUpdateComponent implements OnInit {
       cep: values.endereco.cep,
       cidade: values.endereco.localidade,
       complemento: values.endereco.complemento,
+      id: +this.id_time,
       dt_nascimento: values.infos.dt_nascimento,
       img_scudo: values.img_scudo,
       img_stadium: values.img_stadium,
       initials: values.infos.initials,
-      ligas_id: values.endereco.leagues,
+      liga: { id:  +this.id_liga},
+      contratos: [],
       logradouro: values.endereco.logradouro,
       name: values.infos.name,
       numero: values.endereco.numero,

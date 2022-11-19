@@ -3,7 +3,8 @@
   <div class="row justify-content-center">
     <div *ngFor="let t of equipes" class="box d-flex flex-column justify-content-center align-items-center">
       <a class="text-center d-flex flex-column align-items-center" routerLink="{{t.initials}}/{{ t.id }}">
-        <img class="scudo" [src]="t.img_scudo" alt="" />
+        <!-- <img class="scudo" src="{{url_scudo}}{{t.img_scudo}}+'.png'" alt="" /> -->
+        <img class="scudo" [src]="url_scudo+t.initials+'.png'" alt="" />
         {{ t.name }}
         <!-- https://www.freelogoservices.com/pt/step2 -->
       </a>

@@ -36,7 +36,7 @@
         <div class="input-data my-2">
           <div class="row justify-content-around">
 
-            <div class="col-lg-6 col-md-6">
+            <div class="col-lg-4 col-md-4">
               <mat-form-field appearance="fill" class="w-100">
                 <mat-label>Sistema de disputa</mat-label>
                 <mat-select formControlName="system">
@@ -47,13 +47,16 @@
               </mat-form-field>
             </div>
 
-            <div class="col-lg-6 col-md-6">
+            <div class="col-lg-5 col-md-5">
               <mat-form-field appearance="fill" class="w-100">
                 <mat-label>Modalidade</mat-label>
                 <mat-select formControlName="mode">
                   <mat-option *ngFor="let t of tipo" [value]="t"> {{ t }} </mat-option>
                 </mat-select>
               </mat-form-field>
+            </div>
+            <div class="col-md-3 col-sm-3 d-flex align-items-center">
+              <mat-slide-toggle formControlName="status">Status</mat-slide-toggle>
             </div>
           </div>
         </div>

@@ -10,6 +10,7 @@ import { TeamsService } from 'src/app/shared/services/teamService/teams.service'
 export class TeamHeadComponent implements OnInit {
 
   equipes: any = [];
+  url_scudo: string = 'assets/images/img_scudo/';
 
   constructor(
     private route: Router,

@@ -10,6 +10,8 @@ import { TeamsService } from 'src/app/shared/services/teamService/teams.service'
 export class TeamIdComponent implements OnInit {
   id_time: String = '';
   equipe: any = [];
+
+  url_scudo: string = 'assets/images/img_scudo/';
   atletas: any = [{
     id: 1, surname: 'Kokhym', position: 'Atacante'
   }];

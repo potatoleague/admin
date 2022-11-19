@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { positions } from 'src/app/shared/menu';
@@ -18,7 +19,8 @@ export class PlayerCreateComponent implements OnInit {
   constructor(
     private playerService: PlayerService,
     private teamService: TeamsService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -32,7 +34,8 @@ export class PlayerCreateComponent implements OnInit {
       rg: ['', Validators.required],
       cpf: ['', Validators.required],
       position: ['', Validators.required],
-      surname: ['', Validators.required]
+      surname: ['', Validators.required],
+      team: ['', Validators.required]
     });
   }
 
@@ -47,13 +50,21 @@ export class PlayerCreateComponent implements OnInit {
 
   create(obj: any) {
     let form = {
-      ...obj, status: true, time: 1
+      id: null,
+      cpf: obj.cpf,
+      name: obj.name,
+      position: obj.position,
+      rg: obj.rg,
+      surname: obj.surname,
+      status: true,
+      time: { id: obj.team }
     }
     console.log('FORM', form);
     // return
     this.playerService.createPlayer(form).subscribe({
       next: (data) => {
         console.log('Joagador criado com sucesso');
+        this.router.navigate(['/atletas'])
       },
       error: (err) => {
         console.log('Erro ao criar joagador');
