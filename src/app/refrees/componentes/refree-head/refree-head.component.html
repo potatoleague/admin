@@ -23,18 +23,23 @@
     </div>
   </div>
 
-  <div class="row atletas mt-5">
+  <div class="row atletas mt-5" *ngIf="arbitros.length > 0; else noRefree">
     <ul class="d-flex justify-content-around flex-grow-1 flex-wrap">
-      <li class="nav-item" *ngFor="let j of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]; let i = index">
-        <a class="nav-link active" aria-current="page" routerLink="arbitro/{{i}}">
+      <li class="nav-item" *ngFor="let j of arbitros; let i = index">
+        <a class="nav-link active" aria-current="page" routerLink="{{j.id}}">
           <img src="https://futebolpaulista.com.br/assets/img/icon_jogador.png" alt="">
           <div>
-            <h6 class="m-0">Apelidinho {{ (i+1) }} </h6>
+            <h6 class="m-0">{{ j.surname }} </h6>
             <!-- <p>Juiz {{ (i + 1)}} </p> -->
-            <span>Juiz {{ (i + 1)}} </span>
+            <span>{{ j.name }} </span>
           </div>
         </a>
       </li>
     </ul>
   </div>
+  <ng-template #noRefree>
+    <div class="alert alert-dark mt-5" role="alert" style="font-size: 12px;">
+      Não existem Cadastrados! Clique em <a routerLink="cadastrar">Arbitros</a> para cadastrar!
+    </div>
+  </ng-template>
 </div>

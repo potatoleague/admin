@@ -15,7 +15,7 @@ export const menuData = [
     label: 'Atletas'
   },
   {
-    routerLink: '/arbitragem',
+    routerLink: '/arbitros',
     icon: 'sports',
     label: 'Árbitros'
   },

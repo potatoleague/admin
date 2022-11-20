@@ -8,7 +8,7 @@ import { InitComponent } from './componentes/init/init.component';
 const routes: Routes = [
   { path: '', component: InitComponent, children: [
       { path: '', component: RefreeHeadComponent },
-      { path: 'arbitro/:id', component: RefreeUpdateComponent },
+      { path: ':id', component: RefreeUpdateComponent },
       { path: 'cadastrar', component: RefreeCreateComponent }
     ]
   }
