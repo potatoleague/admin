@@ -1,3 +1,14 @@
 .example-section {
   margin: 12px 0;
 }
+
+.btn-config {
+  button {
+    height: 250px !important;
+    font-size: 40px;
+  }
+
+  .material-icons {
+    font-size: 100px;
+  }
+}

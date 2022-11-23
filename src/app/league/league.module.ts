@@ -6,9 +6,9 @@ import { LeagueRoutingModule } from './league-routing.module';
 import { LeagueHeadComponent } from './componentes/league-head/league-head.component';
 import { LeagueCreateComponent } from './componentes/league-create/league-create.component';
 import { LeagueUpdateComponent } from './componentes/league-update/league-update.component';
-import { InitComponent } from './componentes/init/init.component';
-import { HeaderComponent } from '../shared/header/header.component';
-import { LeagueConfigComponent } from './componentes/league-config/league-config.component';
+import { InitComponent } from './componentes/init/init.component';import { LeagueConfigComponent } from './componentes/league-config/league-config.component';
+import { RoundsComponent } from './componentes/rounds/rounds.component';
+import { ContractsComponent } from './componentes/contracts/contracts.component';
 
 
 @NgModule({
@@ -17,7 +17,9 @@ import { LeagueConfigComponent } from './componentes/league-config/league-config
     LeagueCreateComponent,
     LeagueUpdateComponent,
     InitComponent,
-    LeagueConfigComponent
+    LeagueConfigComponent,
+    RoundsComponent,
+    ContractsComponent
   ],
   imports: [
     CommonModule,

@@ -29,6 +29,7 @@ export class PlayerUpdateComponent implements OnInit {
     this.getTeams();
     this.playerId();
     this.id_player = this.actvRouter.snapshot.params["id"];
+    console.log('id_player', typeof(this.id_player))
   }
 
   profilePlayer() {

@@ -19,14 +19,15 @@ export class PlayerService {
   }
 
   getPlayerById(id: number) {
-    return this.http.get<any[]>(`${environment.baseUrl}/${this.uri}/${id}`);
+    console.log('id??', id)
+    return this.http.get<any>(`${environment.baseUrl}/${this.uri}/${id}`);
   }
 
   createPlayer(form: any) {
-    return this.http.post<any[]>(`${environment.baseUrl}/${this.uri}`, form);
+    return this.http.post<any>(`${environment.baseUrl}/${this.uri}`, form);
   }
 
   updatePlayer(id: number, form: any) {
-    return this.http.post<any[]>(`${environment.baseUrl}/${this.uri}/${id}`, form);
+    return this.http.put<any>(`${environment.baseUrl}/${this.uri}/${id}`, form);
   }
 }

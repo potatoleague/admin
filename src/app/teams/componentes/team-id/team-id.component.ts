@@ -43,4 +43,20 @@ export class TeamIdComponent implements OnInit {
     this.router.navigate([`times/update/${this.id_time}`]);
   }
 
+  retornPosition(position: any): string {
+    if (position == '0') {
+      return 'Goleiro'
+    } else if (position == '1') {
+      return 'Lateral'
+    } else if (position == '2') {
+      return 'Zagueiro'
+    } else if (position == '3') {
+      return 'Volante'
+    } else if (position == '4') {
+      return 'Meia'
+    } else {
+      return 'Atacante'
+    }
+  }
+
 }

@@ -13,11 +13,11 @@ export class TeamsService {
   ) { }
 
   getAllTeams() {
-    return this.http.get<any>(`${environment.baseUrl}/${this.uri}`);
+    return this.http.get<any[]>(`${environment.baseUrl}/${this.uri}`);
   }
 
   getTeamById(id: number) {
-    return this.http.get<any[]>(`${environment.baseUrl}/${this.uri}/${id}`);
+    return this.http.get<any>(`${environment.baseUrl}/${this.uri}/${id}`);
   }
 
   createTeam(form: any) {

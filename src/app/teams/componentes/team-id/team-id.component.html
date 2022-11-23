@@ -58,7 +58,7 @@
                 <div class="d-flex flex-column align-items-start justify-content-end mx-2 w-100">
                   <small style="color: #000;"> {{ d.atleta.surname }} </small>
                   <div class="div d-flex justify-content-between  w-100">
-                    <small>{{ d.atleta.position }}</small>
+                    <small>{{ retornPosition(d.atleta.position) }}</small>
                     <a routerLink="/atletas/{{d.atleta.id}}"><small> <mat-icon>info</mat-icon> </small></a>
                   </div>
                 </div>

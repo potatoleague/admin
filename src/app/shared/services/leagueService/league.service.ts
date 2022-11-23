@@ -8,6 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class LeagueService {
   private uri: string = 'ligas';
+  private uri_contracts = 'contratos'
 
   constructor(
     private http: HttpClient
@@ -28,4 +29,14 @@ export class LeagueService {
   createLeague(form: any) {
     return this.http.post<any>(`${environment.baseUrl}/${this.uri}`, form);
   }
+
+  //Contratos
+  getAllContracts() {
+    return this.http.get<any[]>(`${environment.baseUrl}/${this.uri_contracts}`);
+  }
+
+  getContractsById(id: number) {
+    return this.http.get<any>(`${environment.baseUrl}/${this.uri_contracts}/${id}`);
+  }
+  
 }

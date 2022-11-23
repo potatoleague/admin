@@ -1,7 +1,7 @@
 <div class="container">
-  <div class="row mt-3">
-    <div class="col-8 col-lg-4 col-md-4">
-      <mat-form-field class="form" appearance="fill">
+  <div class="row justify-content-between mt-3">
+    <div class="col-xl-8 col-lg-4 col-md-4 m-0 d-flex justify-content-start align-items-center">
+      <mat-form-field class="form w-75" appearance="fill">
         <mat-label>Listar por</mat-label>
         <mat-select >
           <mat-option> Time </mat-option>
@@ -15,8 +15,8 @@
       </select> -->
     </div>
 
-    <div class="col-6 col-lg-4 col-md-4">
-      <button routerLink="cadastrar" mat-raised-button color="primary">
+    <div class="col-xl-4 col-lg-4 col-md-4 d-flex align-items-center justify-content-end">
+      <button class="w-50" routerLink="cadastrar" mat-raised-button color="primary">
         <mat-icon>add</mat-icon> Cadastrar
       </button>
     </div>
@@ -30,7 +30,7 @@
     </div>
   </div>
 
-  <div class="row atletas mt-5">
+  <div class="row atletas mt-5" *ngIf="atletas.length > 0; else noPlayer">
     <ul class="d-flex justify-content-around flex-grow-1 flex-wrap">
       <li class="nav-item" *ngFor="let j of atletas; let i = index">
         <a class="nav-link active" aria-current="page" routerLink="{{j.id}}">
@@ -44,4 +44,9 @@
       </li>
     </ul>
   </div>
+  <ng-template #noPlayer>
+    <div class="alert alert-dark mt-5" role="alert" style="font-size: 13px;">
+      Não existem atletas cadastrados! Clique em <a routerLink="cadastrar">cadastrar</a> para adicionar!
+    </div>
+  </ng-template>
 </div>

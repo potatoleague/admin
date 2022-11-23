@@ -8,8 +8,8 @@ import { InitComponent } from './componentes/init/init.component';
 const routes: Routes = [
   { path: '', component: InitComponent, children: [
       { path: '', component: RefreeHeadComponent },
+      { path: 'cadastrar', component: RefreeCreateComponent },
       { path: ':id', component: RefreeUpdateComponent },
-      { path: 'cadastrar', component: RefreeCreateComponent }
     ]
   }
 ];

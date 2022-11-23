@@ -1,6 +1,7 @@
 <div class="container">
-  <button mat-raised-button routerLink="cadastrar" class="my-3" color="primary">Novo time</button>
-  <div class="row justify-content-center">
+  
+  <button mat-raised-button routerLink="cadastrar" class="my-3" color="primary"><mat-icon>add</mat-icon> Cadastrar</button>
+  <div class="row justify-content-center" *ngIf="equipes.length > 0; else noTeams">
     <div *ngFor="let t of equipes" class="box d-flex flex-column justify-content-center align-items-center">
       <a class="text-center d-flex flex-column align-items-center" routerLink="{{t.initials}}/{{ t.id }}">
         <!-- <img class="scudo" src="{{url_scudo}}{{t.img_scudo}}+'.png'" alt="" /> -->
@@ -10,4 +11,9 @@
       </a>
     </div>
   </div>
+  <ng-template #noTeams>
+    <div class="alert alert-dark mt-5" role="alert" style="font-size: 13px;">
+      Não existem times cadastrados! Clique em <a routerLink="cadastrar">cadastrar</a> para adicionar!
+    </div>
+  </ng-template>
 </div>
