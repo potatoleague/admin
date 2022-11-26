@@ -61,11 +61,13 @@ export class RoundsComponent implements OnInit {
       }
       k++;
       const back1 = timeB.splice(0, 1); // BA
-      const back2 = timeA.splice(2, 1); //MG
+      const back2 = timeA.splice(3, 1); //MG
       timeA.splice(1, 0, back1[0]);
-      timeB.splice(2, 0, back2[0]);
+      timeB.splice(3, 0, back2[0]);
+      console.log('time A', timeA);
+      console.log('time B', timeB);
     }
-    console.log('RESULT SEGUNDO TURNO', round);
+    // console.log('RESULT SEGUNDO TURNO', round);
     // this.secondTurn = round;
     return round;
   }

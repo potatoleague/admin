@@ -21,8 +21,8 @@
             <td data-label="Nome"> {{ league.name }} </td>
             <td data-label="Início"> {{ league.dt_start | date: 'dd/MM/yyyy' }} </td>
             <td data-label="Fim"> {{ league.dt_end | date: 'dd/MM/yyyy' }} </td>
-            <td data-label="Sistema"> {{ league.system }} </td>
-            <td data-label="Modalidade"> {{ league.mode }} </td>
+            <td data-label="Sistema"> {{ league.league_system }} </td>
+            <td data-label="Modalidade"> {{ league.league_mode }} </td>
             <td data-label="Status"> {{ league.status  == true ? 'Ativo' : 'Inativa' }} </td>
             <td data-label="Ações" class="align-middle">
               <div class="d-flex justify-content-end align-items-end">

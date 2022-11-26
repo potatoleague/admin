@@ -39,7 +39,7 @@
             <div class="col-lg-6 col-md-6">
               <mat-form-field appearance="fill" class="w-100">
                 <mat-label>Sistema de disputa</mat-label>
-                <mat-select formControlName="system">
+                <mat-select formControlName="league_system">
                   <mat-option *ngFor="let d of disputa" [value]="d.name">
                     {{ d.name }}
                   </mat-option>
@@ -50,7 +50,7 @@
             <div class="col-lg-6 col-md-6">
               <mat-form-field appearance="fill" class="w-100">
                 <mat-label>Modalidade</mat-label>
-                <mat-select formControlName="mode">
+                <mat-select formControlName="league_mode">
                   <mat-option *ngFor="let t of tipo" [value]="t"> {{ t }} </mat-option>
                 </mat-select>
               </mat-form-field>

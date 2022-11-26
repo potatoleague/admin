@@ -30,8 +30,8 @@ export class LeagueCreateComponent implements OnInit {
       name: [''],
       dt_start: [''],
       dt_end: [''],
-      system: [''],
-      mode: ['']
+      league_system: [''],
+      league_mode: ['']
     });
   }
 
