@@ -1,2 +1,43 @@
-<p>player-id works!</p>
-<button mat-raised-button (click)="update()" color="primary">Atualizar atleta</button>
+<!-- <p>player-id works!</p>
+<button mat-raised-button (click)="update()" color="primary">Atualizar atleta</button> -->
+
+<div class="container">
+  <div class="row p-3 mt-5 card-size mat-elevation-z5">
+    <div class="col-6 data-players">
+      <img src="https://conteudo.fpf.org.br/atletas/40693073896/foto/12072022110954446.jpg" alt="">
+      <div class="w-100">
+        <p class="m-0">{{ atleta.name }}</p>
+        <h6 class="m-0"> {{ atleta.surname }} </h6>
+        <h6 class="m-0">39 anos (1983)</h6>
+        <mat-divider class="my-2"></mat-divider>
+        <span> {{ atleta.time.name }} </span>
+      </div>
+    </div>
+    <div class="col-6 d-flex justify-content-center align-items-center">
+      <img src="assets/images/field.jpg" alt="" srcset="" style="width: 50%;">
+    </div>
+    <div class="col-6">
+      <div class="box-card-player">
+        OI
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="box-card-player">333</div>
+    </div>
+
+    <div class="col-12">
+      <h3>Jogos disputados</h3>
+      <mat-divider></mat-divider>
+      <h3>Domingo - 04 de Dezembro de 2022</h3>
+      <div class="d-flex justify-content-center align-items-center">
+        <span>BATATAIS</span>
+        <img src="../../../../assets/images/img_scudo/BFC.png" alt="" srcset="" style="width: 5%;">
+        <span> x </span>
+        <img src="../../../../assets/images/img_scudo/SPFC.png" alt="" srcset="" style="width: 5%;">
+        <span>SÂO PAULO</span>
+      </div>
+
+    </div>
+
+  </div>
+</div>

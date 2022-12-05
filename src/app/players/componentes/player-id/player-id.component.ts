@@ -9,6 +9,7 @@ import { PlayerService } from 'src/app/shared/services/playerService/player.serv
 })
 export class PlayerIdComponent implements OnInit {
   id: string = '';
+  atleta: any = [];
 
   constructor(
     private actvRouter: ActivatedRoute,
@@ -24,6 +25,7 @@ export class PlayerIdComponent implements OnInit {
   getPlayerId() {
     this.playerService.getPlayerById(+this.id).subscribe({
       next: (data) => {
+        this.atleta = data;
         console.log(data);
       }
     })
